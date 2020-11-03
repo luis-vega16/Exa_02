@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Examen</title>
+    <!-- Luis Fernando Vega Diaz - A01411169 -->
+    <style type="text/css">
+      
+      .pokecard {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(24, 120, 158);
+        padding: 2rem;
+        width: 10rem;
+        height: 15rem;
+        margin: 1rem;
+        border-radius: 0.2rem;
+      }
+
+      body {
+          background-color: cyan;
+      }
+      h1 {
+        font-size: 20px;
+      }
+    </style>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./utils.js"></script>
+  </head>
+  <body>
+<center>
+  <img src="poke.png" alt="">
+</center>
+    
+    <center>
+
+  
+    <div>    
+      Nombre: <input type="text" id="pokemon-name" />
+      
+      <select id="type" name="type">
+        <option value="pokemon">Pokemon</option>
+        <option value="item-card">Item Card</option>
+        <option value="prize-card">Prize Card</option>
+        <option value="element-card">Element Card</option>
+      </select>
+      
+      Datos (Solo si no es un Pokemon ): <input type="text" id="data" />
+      <button id="add-item">agregar</button></div>
+    
+    <div>     
+      <br>
+       
+      <button id="getAll">Obtener mazo</button>
+    </div>
+  
+    <br>
+    <div>
+      Obtener por nombre: <input type="text" id="get-pokemon-name" />
+      <button id="getID">Obtener</button>
+    </div>
+    <br>
+    <div>
+      Borrar: <input type="text" id="delete-pokemon" />
+      <button id="delete">Borrar</button>
+    </div>
+    <br>
+    <div>
+      Actualizar: <input type="text" id="update-pokemon" />
+      Datos : <input type="text" id="data-update" />
+      <button id="update">Actualizar</button>
+    </div>
+    <br>
+    <div id="error"></div>
+    <div id="items" class="items"></div>
+
+    <form action="/examen.html">
+      <button type="submit">Examen</button>
+    </center>
+  </body>
+  <p id="index">.</p>
+</html>
